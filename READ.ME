@@ -1,0 +1,46 @@
+// 1. Make a new file: index.js and some new folder and file within: 
+    - controllers
+    - models >> user.js
+    - views
+    - 
+    
+// 2. Install module tambahan: body-parser
+$ npm install --save body-parser
+
+    - Body-parser mrp modul yang digunakan untuk mengambil data dari form pada framework express.
+
+// 4. Install sequelize and driver to connect database. Sequelize berfungsi untuk menjembatani javascript dan database (ORM)
+$ npm install --save sequelize
+
+    - intall driver of your database. Choose one:
+$ npm install --save pg pg-hstore	    // For Postgres
+$ npm install --save mysql2
+$ npm install --save mariadb
+$ npm install --save sqlite3
+$ npm install --save tedious			// Microsoft SQL Server
+
+// 5.3 Open the pgadmin4,
+    - Create local: klik kanan pada server >> create >> server
+        nama server		     : local
+        host name/address	 : localhost
+        maintenance database : databaseName
+        username		     : userName
+        password		     : password
+    - create database // masukkin nama database nya, nama postgressnya: binar-users
+    - go to binar-users >> schema >> tables
+    - on the table, create table, beri nama table: users
+    - in the column: tambah (+)
+        >>      name       >>   Data Type   >>  Length  >> Not Null >>  Primary Key >>
+        >>  id             >>   serial      >>          >>  yes     >>      Yes     >>
+        >>  name           >>   character   >>  200     >>          >>              >>
+        >>  created_at     >>   date        >>          >>          >>              >>
+        >>  updated_at     >>   date        >>          >>          >>              >>
+    - save
+    
+    *biasakan untuk selalu Refresh setelah menambah atau merubah data di table (klik kana pada nama table, lalu klik refresh)
+
+    - in the users (table), klik kanan >> view data >> all rows
+        Query editor : perintah untuk ngebaca data dari sql
+    - Ketik pada Query editor: SELECT * FROM tableName
+        in this section tableName is “users” >> SELECT * FROM users
+    - Klik tanda panah ► excecute
